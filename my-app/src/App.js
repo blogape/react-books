@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PriceList from './components/PriceList.js';
-import ViewTab from './components/ViewTab';
+ import PriceList from './components/PriceList.js';
+ import ViewTab from './components/ViewTab';
 import {LIST_VIEW,CHART_VIEW} from './utility';
+import MonthPicker from './components/PriceList';
 
 const items=[{
   "id":1,
@@ -43,6 +44,8 @@ const items=[{
 ]
 class App extends Component {
   render() {
+    console.log(items);
+
     return (
       <div className="App">
         {/* <header className="App-header">
@@ -59,16 +62,21 @@ class App extends Component {
             Learn React1
           </a>
         </header> */}
-        {/* <PriceList items={items}
+
+         <PriceList items={items}
          onModifyItem={(item)=>{alert(item.id)}}
          onDeleteItem={(item)=>{alert(item)}}
-           /> */}
-           <ViewTab
+           /> 
+           {/* <ViewTab
            activeTab={LIST_VIEW}
            onTabChange={(view)=>{
             console.log(view)
            }}
-           />
+           /> */}
+      <MonthPicker
+      year={2018}
+      month={11}
+      />
       </div>
     );
   }

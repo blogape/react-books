@@ -45,4 +45,10 @@ const ViewTab=({activeTab,onTabChange})=>(
     </ul>
 )
 
+ViewTab.PropTypes={
+    activeTab:PropTypes.string.isRequired,
+    onTabChange:PropTypes.func.isRequired,
+    
+}
+
 export default ViewTab;
