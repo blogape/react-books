@@ -4,7 +4,7 @@ import './App.css';
  import PriceList from './components/PriceList.js';
  import ViewTab from './components/ViewTab';
 import {LIST_VIEW,CHART_VIEW} from './utility';
-import MonthPicker from './components/PriceList';
+import MonthPicker from './components/MonthPicker';
 
 const items=[{
   "id":1,
@@ -67,15 +67,15 @@ class App extends Component {
          onModifyItem={(item)=>{alert(item.id)}}
          onDeleteItem={(item)=>{alert(item)}}
            /> 
-           {/* <ViewTab
+           <ViewTab
            activeTab={LIST_VIEW}
            onTabChange={(view)=>{
             console.log(view)
            }}
-           /> */}
+           />
       <MonthPicker
       year={2018}
-      month={11}
+      month={3}
       />
       </div>
     );

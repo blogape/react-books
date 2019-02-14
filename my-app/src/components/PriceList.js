@@ -3,7 +3,6 @@ import Ionicon from 'react-ionicons';
 import PropTypes from 'prop-types';
 
 const PriceList=({items,onModifyItem,onDeleteItem})=>{
-    console.log(items);
     return(
         <ul className='list-group list-grop-flush'> 
             {
@@ -46,7 +45,7 @@ const PriceList=({items,onModifyItem,onDeleteItem})=>{
         </ul>
     )
 }
-PriceList.propTypes={
+PriceList.PropTypes={
     items:PropTypes.array.isRequired,
     onModifyItem:PropTypes.func.isRequired,
     onDeleteItem:PropTypes.func.isRequired
