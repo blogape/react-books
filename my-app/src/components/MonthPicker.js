@@ -24,6 +24,13 @@ class MothPicker extends Component{
         console.log(this.state.selectYear);
 
     }
+    selectMonth=(event,monthnumber)=>{
+        event.preventDefault();
+        this.setState({
+            isopen:false
+        })
+        this.props.onChange(this.state.selectMonth,monthnumber);
+    }
     render(){
         const {year,month} =this.props;
         const isopen=this.state.isopen;
@@ -49,7 +56,7 @@ class MothPicker extends Component{
                     <div className='col'>
                     {monthRange.map((monthnumber,index)=>(
                        <a className={(monthnumber==month)?'dropdown-item active':'dropdown-item'} href='#'
-                       onClick={}
+                       onClick={(year,month)=>{}}
                        key={index}>
                         {padLeft(monthnumber)}月
                        </a>
